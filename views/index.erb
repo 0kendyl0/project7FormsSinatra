@@ -1,10 +1,18 @@
+<form>
+  <label for="year">Year Ex. 2015</label>
+  	<input class="form-control" name="year" value="<%= params['year'] %>" type="number"></input>
+  <label for="month">Month Ex. 4</label>
+  	<input class="form-control" name="month" value="<%= params['month'] %>" type="number"></input>
+  <label for="day">Day Ex. 28</label>
+  	<input class="form-control" name="day" value="<%= params['day'] %>" type="number"></input>
+  		<button type="submit">Find U.S. Holidays!</button>
+</form>
+    	
 
-    	<h1>Current Holidays</h1>
-   		<% @holidays.each do |holiday| %>
-    		<p><%= holiday[0]['name'] %></p>
-    	<% end %>
 
-    	<h2>Birthday Holidays</h2>
-    	<% @birthdayHolidays.each do |holiday| %>
-    		<p><%= holiday[0]['name'] %></p>
-    	<% end %>
+<h1>Current Holidays</h1>
+   	<% @holidays.each do |holiday| %>
+    	<p><%= holiday['name']%></p>
+    <% end %>
+
+
