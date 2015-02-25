@@ -8,9 +8,9 @@ class MyWebApp < Sinatra::Base
 		params['month'] ||= Time.now.month
 		params['day'] ||= Time.now.day
 		if params['day'].nil? || params['day'] == ""
-	  		@holidays = HolidApi.get(country: 'us', year: params['year'], month: params['month']).flatten
+			@holidays = HolidApi.get(country: 'us', year: params['year'], month: params['month']).flatten
 		else
-  			@holidays = HolidApi.get(country: 'us', year: params['year'], month: params['month'], day: params['day'])
+			@holidays = HolidApi.get(country: 'us', year: params['year'], month: params['month'], day: params['day'])
 		end
 		erb :index
 	end
